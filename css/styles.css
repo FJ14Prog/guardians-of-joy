@@ -268,13 +268,14 @@ button {
     height: 100%;
 
     background:
-        radial-gradient(circle at 70% 50%,
-            rgba(255, 255, 255, 0.08),
-            transparent 30%),
+        url("../assets/images/hero/hero-home.jpg"),
         linear-gradient(120deg,
             #172532 0%,
             #3d5965 42%,
             #819a99 100%);
+
+    background-position: center center;
+    background-size: cover;
 
     transform: scale(1.04);
 
@@ -315,9 +316,13 @@ button {
 
 .hero-overlay {
     background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.14) 42%,
+            rgba(0, 0, 0, 0.04) 72%),
         linear-gradient(to top,
-            rgba(0, 0, 0, 0.48),
-            rgba(0, 0, 0, 0.03) 60%);
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.05) 62%);
 }
 
 .hero-content {
@@ -634,9 +639,16 @@ button {
 
 .product-image-1 {
     background:
+        linear-gradient(180deg,
+            rgba(0, 0, 0, 0.02),
+            rgba(0, 0, 0, 0.16)),
+        url("../assets/images/campaign/colleccio-sweatshirt-terracota.jpg"),
         linear-gradient(135deg,
             #e6e4df,
             #c7c5bf);
+
+    background-position: 64% center;
+    background-size: cover;
 }
 
 .product-image-2 {
@@ -648,9 +660,13 @@ button {
 
 .product-image-3 {
     background:
+        url("../assets/images/products/primera-colleccio-producte.jpg"),
         linear-gradient(135deg,
             #bbbcb9,
             #8a8c88);
+
+    background-position: center center;
+    background-size: cover;
 }
 
 .product-tag {
@@ -744,9 +760,13 @@ button {
         linear-gradient(160deg,
             rgba(0, 0, 0, 0.1),
             rgba(0, 0, 0, 0.4)),
+        url("../assets/images/campaign/sigues-qui-ets-skatepark.jpg"),
         linear-gradient(125deg,
             #8c5f4d,
             #c09a78);
+
+    background-position: center 42%;
+    background-size: cover;
 }
 
 .editorial-copy {
@@ -827,12 +847,16 @@ button {
 .sitges-landscape {
     background:
         linear-gradient(165deg,
-            rgba(0, 0, 0, 0.03),
-            rgba(0, 0, 0, 0.3)),
+            rgba(17, 17, 17, 0.06),
+            rgba(17, 17, 17, 0.22)),
+        url("../assets/images/sitges/sitges-post.jpg"),
         linear-gradient(145deg,
             #889a89,
             #aaa27e 55%,
             #7d8d95);
+
+    background-position: center center;
+    background-size: cover;
 }
 
 .sitges-story {
@@ -1244,6 +1268,10 @@ button {
         display: none;
     }
 
+    .hero-placeholder {
+        background-position: 61% center;
+    }
+
     .manifest {
         grid-template-columns: 1fr;
     }
@@ -1274,6 +1302,10 @@ button {
 
     .sitges-grid {
         grid-template-columns: 1fr;
+    }
+
+    .sitges-landscape {
+        min-height: 62vh;
     }
 
     .sitges-story {
@@ -1339,11 +1371,15 @@ button {
     }
 
     .hero h1 {
-        font-size: clamp(60px, 21vw, 100px);
+        font-size: clamp(52px, 17vw, 68px);
     }
 
     .hero h1 span {
         margin-left: 0;
+    }
+
+    .hero-placeholder {
+        background-position: 62% center;
     }
 
     .hero-index,
@@ -1352,10 +1388,10 @@ button {
     }
 
     .hero-seal {
-        width: 82px;
+        width: 76px;
 
         right: 20px;
-        bottom: 150px;
+        bottom: 250px;
     }
 
     .section {
