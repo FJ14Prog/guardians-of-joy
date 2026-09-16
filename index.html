@@ -15,23 +15,26 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet" />
+    <link rel="icon" type="image/png" href="assets/logos/isologo-cueva.png" />
+    <link rel="apple-touch-icon" href="assets/logos/isologo-cueva.png" />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body>
+<body id="top">
 
     <!-- ======================================================
        HEADER
   ======================================================= -->
     <header class="site-header" id="siteHeader">
-        <a href="#" class="brand" aria-label="Guardians of Joy">
+        <a href="#top" class="brand" aria-label="Guardians of Joy">
             <img src="assets/logos/logo-horizontal.png" alt="Guardians of Joy" />
         </a>
 
         <nav class="main-nav" id="mainNav">
-            <a href="#shop">Botiga</a>
+            <a href="#shop">Col·lecció</a>
             <a href="#story">La marca</a>
             <a href="#sitges">Sitges</a>
+            <a href="#contacte">Contacte</a>
         </nav>
 
         <div class="header-actions">
@@ -116,13 +119,13 @@
         <!-- ======================================================
          MANIFEST
     ======================================================= -->
-        <section class="manifest section reveal" id="story">
+        <section class="manifest section reveal">
 
             <div class="section-number">
                 01
             </div>
 
-            <div class="manifest-content">
+            <div class="manifest-content" id="story">
 
                 <p class="section-label">
                     Manifest
@@ -155,22 +158,25 @@
         <!-- ======================================================
          SHOP / FIRST DROP
     ======================================================= -->
-        <section class="shop-section section" id="shop">
+        <section class="shop-section section">
 
-            <div class="shop-heading reveal">
-                <div>
-                    <p class="section-label">Primera col·lecció — 01</p>
-                    <h2>Primera col·lecció.</h2>
+            <div id="shop">
+                <div class="shop-heading reveal">
+                    <div>
+                        <p class="section-label">Primera col·lecció — 01</p>
+                        <h2>Primera col·lecció.</h2>
+                    </div>
+
+                    <a href="#" class="text-link">
+                        Veure-ho tot →
+                    </a>
                 </div>
-
-                <a href="#" class="text-link">
-                    Veure-ho tot →
-                </a>
             </div>
 
 
             <div class="product-grid">
 
+                <!-- Preus provisionals: revisar quan existeixi el catàleg definitiu. -->
                 <article class="product-card product-card-large reveal">
 
                     <a href="#" class="product-image product-image-1">
@@ -183,7 +189,7 @@
 
                     <div class="product-info">
                         <div>
-                            <h3>Guardian Hoodie</h3>
+                            <h3>Guardian Sweatshirt</h3>
                             <p>Blanc trencat</p>
                         </div>
 
@@ -203,8 +209,8 @@
 
                     <div class="product-info">
                         <div>
-                            <h3>Joy Tee</h3>
-                            <p>Verd mar</p>
+                            <h3>Guardian Tote</h3>
+                            <p>Cotó natural</p>
                         </div>
 
                         <span>39 €</span>
@@ -223,8 +229,8 @@
 
                     <div class="product-info">
                         <div>
-                            <h3>Cave Sweatshirt</h3>
-                            <p>Gris pedra</p>
+                            <h3>Guardian Cap</h3>
+                            <p>Terracota</p>
                         </div>
 
                         <span>69 €</span>
@@ -268,20 +274,22 @@
         <!-- ======================================================
          SITGES
     ======================================================= -->
-        <section class="sitges section" id="sitges">
+        <section class="sitges section">
 
-            <div class="sitges-top reveal">
+            <div id="sitges">
+                <div class="sitges-top reveal">
 
-                <p class="section-label">
-                    Origen
-                </p>
+                    <p class="section-label">
+                        Origen
+                    </p>
 
-                <h2>
-                    ENTRE MAR,<br>
-                    PEDRA<br>
-                    I VINYES.
-                </h2>
+                    <h2>
+                        ENTRE MAR,<br>
+                        PEDRA<br>
+                        I VINYES.
+                    </h2>
 
+                </div>
             </div>
 
 
@@ -400,7 +408,7 @@
         </div>
 
 
-        <div class="footer-links">
+        <div class="footer-links" id="contacte">
 
             <div>
                 <a href="#shop">Botiga</a>
@@ -411,7 +419,7 @@
             <div>
                 <a href="#">Instagram</a>
                 <a href="#">TikTok</a>
-                <a href="#">Contacte</a>
+                <a href="#contacte">Contacte</a>
             </div>
 
             <div>
