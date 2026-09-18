@@ -111,22 +111,24 @@ if ("IntersectionObserver" in window) {
 
 // ======================================================
 // PARALLAX MOLT SUAU AL HERO
+// Respecta la preferència del sistema per reduir moviment.
 // ======================================================
 
 const heroMedia = document.querySelector(".hero-media");
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
 
-window.addEventListener("scroll", () => {
-  if (!heroMedia) {
-    return;
-  }
+if (heroMedia && !prefersReducedMotion) {
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
 
-  const scrollPosition = window.scrollY;
-
-  if (scrollPosition < window.innerHeight) {
-    heroMedia.style.transform =
-      `translateY(${scrollPosition * 0.12}px)`;
-  }
-});
+    if (scrollPosition < window.innerHeight) {
+      heroMedia.style.transform =
+        `translateY(${scrollPosition * 0.12}px)`;
+    }
+  });
+}
 
 
 // ======================================================
