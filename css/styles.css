@@ -340,8 +340,21 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .hero-seal-text {
-        animation: none;
+    html {
+        scroll-behavior: auto;
+    }
+
+    .hero-seal-text,
+    .marquee-track,
+    .hero-placeholder {
+        animation: none !important;
+    }
+
+    .reveal,
+    .reveal.visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 }
 
@@ -1081,7 +1094,8 @@ button {
     font-size:
         clamp(58px, 6.8vw, 104px);
 
-    line-height: 0.82;
+    /* Una mica més d'interlineat perquè els accents en majúscules respirin. */
+    line-height: 0.92;
 
     font-weight: 400;
 
