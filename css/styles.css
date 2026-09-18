@@ -831,12 +831,12 @@ button {
         linear-gradient(160deg,
             rgba(0, 0, 0, 0.1),
             rgba(0, 0, 0, 0.4)),
-        url("../assets/images/campaign/sigues-qui-ets-skatepark.jpg"),
+        url("../assets/images/campaign/sigues-qui-ets-definitiva.png"),
         linear-gradient(125deg,
             #8c5f4d,
             #c09a78);
 
-    background-position: center 42%;
+    background-position: 43% center;
     background-size: cover;
 }
 
@@ -862,7 +862,7 @@ button {
 
     font-size: clamp(64px, 7vw, 120px);
 
-    line-height: 0.82;
+    line-height: 0.88;
 
     font-weight: 400;
 
