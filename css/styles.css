@@ -505,9 +505,8 @@ button {
     width: max-content;
 
     display: flex;
-    gap: 65px;
 
-    animation: marquee 25s linear infinite;
+    animation: marquee 32s linear infinite;
 
     font-size: 12px;
 
@@ -515,15 +514,36 @@ button {
     letter-spacing: 0.21em;
 }
 
-.marquee-track span::after {
+.marquee-group {
+    min-width: 100vw;
+
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.marquee-group span {
+    display: inline-flex;
+    align-items: center;
+
+    white-space: nowrap;
+}
+
+.marquee-group span::after {
     content: "●";
 
     margin-left: 65px;
+    margin-right: 65px;
 
     font-size: 7px;
 }
 
 @keyframes marquee {
+
+    from {
+        transform: translateX(0);
+    }
 
     to {
         transform: translateX(-50%);
