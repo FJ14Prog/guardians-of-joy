@@ -322,7 +322,7 @@ button {
         var(--font-sans);
 
     font-size: 10.5px;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.08em;
 }
 
@@ -1310,6 +1310,10 @@ button {
 
     body.menu-open .main-nav a:nth-child(3) {
         animation-delay: 0.1s;
+    }
+
+    body.menu-open .main-nav a:nth-child(4) {
+        animation-delay: 0.15s;
     }
 
     body.menu-open .menu-toggle span:first-child {
