@@ -3,16 +3,24 @@
 // ======================================================
 
 const siteHeader = document.getElementById("siteHeader");
+const backToTop = document.getElementById("backToTop");
 
 function updateHeader() {
-  if (!siteHeader) {
-    return;
+  const isScrolled = window.scrollY > 60;
+
+  if (siteHeader) {
+    if (isScrolled) {
+      siteHeader.classList.add("scrolled");
+    } else {
+      siteHeader.classList.remove("scrolled");
+    }
   }
 
-  if (window.scrollY > 60) {
-    siteHeader.classList.add("scrolled");
-  } else {
-    siteHeader.classList.remove("scrolled");
+  if (backToTop) {
+    backToTop.classList.toggle(
+      "visible",
+      window.scrollY > 600
+    );
   }
 }
 
