@@ -1377,12 +1377,15 @@ button {
 
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-start;
         gap: 22px;
 
         padding:
-            calc(var(--header-height) + 70px) clamp(25px, 7vw, 70px) 60px;
+            calc(var(--header-height) + clamp(180px, 28vh, 280px)) clamp(25px, 7vw, 70px) 90px;
+
+        overflow-y: auto;
+        overscroll-behavior: contain;
 
         background: var(--paper);
         color: var(--ink);
