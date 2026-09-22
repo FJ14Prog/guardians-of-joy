@@ -346,6 +346,7 @@ button {
     place-items: center;
 
     opacity: 0.92;
+    transform-origin: center;
 }
 
 .hero-seal-text {
@@ -396,6 +397,24 @@ button {
     .hero-seal-text,
     .marquee-track,
     .hero-placeholder {
+        animation: none !important;
+    }
+
+    html.hero-intro .site-header,
+    html.hero-intro .hero-eyebrow,
+    html.hero-intro .hero-title-line,
+    html.hero-intro .hero-copy,
+    html.hero-intro .hero-cta,
+    html.hero-intro .hero-index,
+    html.hero-intro .scroll-label {
+        opacity: 1;
+        transform: none;
+        animation: none !important;
+    }
+
+    html.hero-intro .hero-seal {
+        opacity: 0.92;
+        transform: none;
         animation: none !important;
     }
 
@@ -463,8 +482,11 @@ button {
     letter-spacing: 0;
 }
 
-.hero h1 span {
+.hero-title-line {
     display: block;
+}
+
+.hero-title-line-2 {
     margin-left: 0.55em;
 }
 
@@ -535,6 +557,73 @@ button {
     letter-spacing: 0.18em;
 
     writing-mode: vertical-rl;
+}
+
+html.hero-intro .site-header,
+html.hero-intro .hero-eyebrow,
+html.hero-intro .hero-title-line,
+html.hero-intro .hero-copy,
+html.hero-intro .hero-cta,
+html.hero-intro .hero-index,
+html.hero-intro .scroll-label {
+    opacity: 0;
+    transform: translateY(18px);
+    will-change: opacity, transform;
+}
+
+html.hero-intro .site-header {
+    transform: translateY(-8px);
+    animation: heroIntroIn 0.65s var(--ease) 0.2s forwards;
+}
+
+html.hero-intro .hero-eyebrow {
+    animation: heroIntroIn 0.68s var(--ease) 0.35s forwards;
+}
+
+html.hero-intro .hero-title-line-1 {
+    animation: heroIntroIn 0.7s var(--ease) 0.45s forwards;
+}
+
+html.hero-intro .hero-title-line-2 {
+    animation: heroIntroIn 0.7s var(--ease) 0.58s forwards;
+}
+
+html.hero-intro .hero-copy {
+    animation: heroIntroIn 0.62s var(--ease) 0.75s forwards;
+}
+
+html.hero-intro .hero-cta {
+    animation: heroIntroIn 0.58s var(--ease) 0.85s forwards;
+}
+
+html.hero-intro .hero-index,
+html.hero-intro .scroll-label {
+    animation: heroIntroIn 0.54s var(--ease) 0.95s forwards;
+}
+
+html.hero-intro .hero-seal {
+    opacity: 0;
+    transform: scale(0.94);
+    will-change: opacity, transform;
+    animation: heroIntroSeal 0.46s var(--ease) 1.05s forwards;
+}
+
+@keyframes heroIntroIn {
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes heroIntroSeal {
+
+    to {
+        opacity: 0.92;
+        transform: scale(1);
+    }
+
 }
 
 
@@ -1542,7 +1631,7 @@ button {
         font-size: clamp(52px, 17vw, 68px);
     }
 
-    .hero h1 span {
+    .hero-title-line-2 {
         margin-left: 0;
     }
 

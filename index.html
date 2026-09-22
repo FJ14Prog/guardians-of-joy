@@ -17,6 +17,17 @@
         rel="stylesheet" />
     <link rel="icon" type="image/png" href="assets/logos/isologo-cueva.png" />
     <link rel="apple-touch-icon" href="assets/logos/isologo-cueva.png" />
+    <script>
+        (function () {
+            try {
+                if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                    document.documentElement.classList.add("hero-intro");
+                }
+            } catch (error) {
+                document.documentElement.classList.remove("hero-intro");
+            }
+        }());
+    </script>
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -73,8 +84,8 @@
                 </p>
 
                 <h1>
-                    GUARDIANS
-                    <span>OF JOY</span>
+                    <span class="hero-title-line hero-title-line-1">GUARDIANS</span>
+                    <span class="hero-title-line hero-title-line-2">OF JOY</span>
                 </h1>
 
                 <p class="hero-copy">
