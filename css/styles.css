@@ -428,6 +428,15 @@ button {
         transform: none;
         transition: none;
     }
+
+    .manifest-animate .section-number,
+    .manifest-animate .section-label,
+    .manifest-animate .manifest-line,
+    .manifest-animate .manifest-bottom p {
+        opacity: 1;
+        transform: none;
+        animation: none !important;
+    }
 }
 
 @keyframes heroScale {
@@ -761,12 +770,57 @@ html.hero-intro .hero-seal {
     letter-spacing: 0;
 }
 
-.manifest-content h2 span {
+.manifest-line {
     display: block;
+}
 
+.manifest-line-2 {
     margin-left: 0.8em;
 
     color: var(--terracotta);
+}
+
+.manifest-animate .section-number,
+.manifest-animate .section-label,
+.manifest-animate .manifest-line,
+.manifest-animate .manifest-bottom p {
+    opacity: 0;
+    transform: translateY(20px);
+    will-change: opacity, transform;
+}
+
+.manifest-visible .section-number,
+.manifest-visible .section-label {
+    animation: manifestIn 0.72s var(--ease) forwards;
+}
+
+.manifest-visible .manifest-line-1 {
+    animation: manifestIn 0.78s var(--ease) 0.1s forwards;
+}
+
+.manifest-visible .manifest-line-2 {
+    animation: manifestIn 0.78s var(--ease) 0.2s forwards;
+}
+
+.manifest-visible .manifest-line-3 {
+    animation: manifestIn 0.78s var(--ease) 0.3s forwards;
+}
+
+.manifest-visible .manifest-bottom p {
+    animation: manifestIn 0.76s var(--ease) 0.42s forwards;
+}
+
+.manifest-visible .manifest-bottom p:nth-child(2) {
+    animation-delay: 0.48s;
+}
+
+@keyframes manifestIn {
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 }
 
 .manifest-bottom {
@@ -1668,7 +1722,7 @@ html.hero-intro .hero-seal {
         margin-bottom: 55px;
     }
 
-    .manifest-content h2 span {
+    .manifest-line-2 {
         margin-left: 0;
     }
 

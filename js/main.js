@@ -98,6 +98,37 @@ if (menuToggle && mainNav) {
   });
 }
 
+// ======================================================
+// MANIFEST - ENTRADA EDITORIAL PRÒPIA
+// ======================================================
+
+const manifestSection = document.getElementById("manifestSection");
+
+if (manifestSection && !prefersReducedMotion && "IntersectionObserver" in window) {
+  manifestSection.classList.add("manifest-animate");
+
+  const manifestObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        entry.target.classList.add("manifest-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.22,
+    }
+  );
+
+  manifestObserver.observe(manifestSection);
+} else if (manifestSection) {
+  manifestSection.classList.remove("manifest-animate");
+  manifestSection.classList.remove("manifest-visible");
+}
+
 
 // ======================================================
 // REVEAL D'ELEMENTS QUAN ENTREN A PANTALLA
